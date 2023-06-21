@@ -28,19 +28,19 @@ static void	fill_header(t_image *self, char *result)
 	result[0] = 'B';
 	result[1] = 'M';
 	*((uint32_t *)(result + 2)) = ft_io_le_convert_u32(54 + whole_size);
-	*((uint32_t *)(result + 6)) = 0;
-	*((uint32_t *)(result + 10)) = 54;
-	*((uint32_t *)(result + 14)) = 40;
-	*((uint32_t *)(result + 18)) = self->width;
-	*((uint32_t *)(result + 22)) = self->height;
-	*((uint16_t *)(result + 26)) = 1;
-	*((uint16_t *)(result + 28)) = 24;
-	*((uint32_t *)(result + 30)) = 0;
-	*((uint32_t *)(result + 34)) = whole_size;
-	*((uint32_t *)(result + 38)) = 0;
-	*((uint32_t *)(result + 42)) = 0;
-	*((uint32_t *)(result + 46)) = 256;
-	*((uint32_t *)(result + 50)) = 0;
+	*((uint32_t *)(result + 6)) = ft_io_le_convert_u32(0);
+	*((uint32_t *)(result + 10)) = ft_io_le_convert_u32(54);
+	*((uint32_t *)(result + 14)) = ft_io_le_convert_u32(40);
+	*((uint32_t *)(result + 18)) = ft_io_le_convert_u32(self->width);
+	*((uint32_t *)(result + 22)) = ft_io_le_convert_u32(self->height);
+	*((uint16_t *)(result + 26)) = ft_io_le_convert_u32(1);
+	*((uint16_t *)(result + 28)) = ft_io_le_convert_u32(24);
+	*((uint32_t *)(result + 30)) = ft_io_le_convert_u32(0);
+	*((uint32_t *)(result + 34)) = ft_io_le_convert_u32(whole_size);
+	*((uint32_t *)(result + 38)) = ft_io_le_convert_u32(0);
+	*((uint32_t *)(result + 42)) = ft_io_le_convert_u32(0);
+	*((uint32_t *)(result + 46)) = ft_io_le_convert_u32(256);
+	*((uint32_t *)(result + 50)) = ft_io_le_convert_u32(0);
 }
 
 static void	fill_body(t_image *self, char *result)
