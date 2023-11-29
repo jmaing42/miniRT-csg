@@ -46,7 +46,7 @@ static t_plane	s_plane(t_map_plane plane)
  * f(ray.position + ray.direction * distance) = 0
  * f(p+ut, q+vt, r+wt) = 0
  *
- * t = (pa + qb + rc + d) / (ua + vb + wc)
+ * t = -(pa + qb + rc + d) / (ua + vb + wc)
  */
 static t_f	s_distance(t_plane p, t_ray r)
 {
